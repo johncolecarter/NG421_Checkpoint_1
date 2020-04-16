@@ -1,6 +1,13 @@
 <div class="view">
     <label>{{todo.title}}</label>
+    <div>
+        <select [(ngModel)]="todo.status">
+            <option value="Todo">Todo</option>
+            <option value="Doing">Doing</option>
+            <option value="Done">Done</option>
+        </select>
+    </div>
     <div class="float-right">
-        <button type="button" (click)= deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
+        <button type="button" (click)=deleteTodo(todo) class="btn btn-danger btn-sm">Delete</button>
     </div>
 </div>

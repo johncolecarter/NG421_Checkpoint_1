@@ -18,7 +18,6 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
   }
   async deleteTodo(todo) {
-    console.log('button was clicked');
     let result;
     const modal = this.modalService.open(ConfirmationModalComponent);
     modal.componentInstance.modalInstance = modal;
