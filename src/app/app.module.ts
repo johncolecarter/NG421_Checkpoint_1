@@ -8,6 +8,7 @@ import { CreateTodoComponent } from './create-todo/create-todo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 import { AppRoutingModule } from './app-rounting.module';
+import { BoardComponent } from './board/board.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-rounting.module';
     TodoComponent,
     TodoListComponent,
     CreateTodoComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
