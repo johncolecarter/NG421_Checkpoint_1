@@ -9,6 +9,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 import { AppRoutingModule } from './app-rounting.module';
 import { BoardComponent } from './board/board.component';
+import { TodotableComponent } from './todotable/todotable.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -18,13 +26,21 @@ import { BoardComponent } from './board/board.component';
     TodoListComponent,
     CreateTodoComponent,
     ConfirmationModalComponent,
-    BoardComponent
+    BoardComponent,
+    TodotableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent],
