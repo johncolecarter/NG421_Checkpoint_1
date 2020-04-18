@@ -1,10 +1,12 @@
-<mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="abc">
-</mat-form-field>
+<div>
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="abc">
+    </mat-form-field>
+</div>
 
 <div>
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width="100%">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width="100%" align="center">
 
         <!-- Position Column -->
         <ng-container matColumnDef="id">
