@@ -1,34 +1,44 @@
-<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width="80%">
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="abc">
+</mat-form-field>
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
+<div>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width="100%">
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
-        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-    </ng-container>
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef> Status </th>
-        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-    </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
-        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-    </ng-container>
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="createdAt">
-        <th mat-header-cell *matHeaderCellDef> Date Created </th>
-        <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
-    </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="createdAt">
+            <th mat-header-cell *matHeaderCellDef> Date Created </th>
+            <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>
