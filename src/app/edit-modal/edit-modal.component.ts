@@ -21,8 +21,4 @@ export class EditModalComponent implements OnInit {
     this.modalInstance.close(this.todo.description);
   }
 
-  // close() {
-  //   this.modalInstance.close('no');
-  // }
-
 }

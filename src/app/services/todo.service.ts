@@ -27,10 +27,6 @@ export class TodoService {
     this.todoList.splice(index, 1);
   }
 
-  editDescription(todo: ITodo) {
-
-  }
-
 
   addTodo(todo: ITodo): void {
     todo.id = ++this.todoId;
