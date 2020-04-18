@@ -1,13 +1,13 @@
-import { Component,OnInit } from '@angular/core';
-import {ITodo} from './interfaces/itodo';
+import { Component, OnInit } from '@angular/core';
+import { ITodo } from './interfaces/itodo';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = "Todos";
+export class AppComponent implements OnInit {
+  title = 'Todos';
   ngOnInit() {
 
   }

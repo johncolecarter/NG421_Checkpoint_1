@@ -10,7 +10,7 @@ import { TodoService } from '../services/todo.service';
 })
 export class TodotableComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'title', 'status', 'decription', 'createdAt'];
+  displayedColumns: string[] = ['id', 'title', 'status', 'description', 'createdAt'];
   dataSource: MatTableDataSource<ITodo>;
 
   constructor(private todoService: TodoService) { }
