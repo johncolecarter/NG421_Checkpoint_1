@@ -6,3 +6,15 @@
     background: grey;
     border: grey;
 }
+
+.todo {
+    color: red;;
+}
+
+.doing {
+    color: green;
+}
+
+.done {
+    text-decoration: line-through;
+}

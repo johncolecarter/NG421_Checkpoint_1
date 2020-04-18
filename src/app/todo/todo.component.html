@@ -1,5 +1,5 @@
 <div class="view">
-    <label *ngIf="!isEditing" (dblclick)="isEditing=true">{{todo.title}}</label>
+    <label *ngIf="!isEditing" (dblclick)="isEditing=true" [ngClass]="GetTitleClass">{{todo.title}}</label>
     <input type="text" *ngIf="isEditing" (blur)="isEditing=false" [(ngModel)]="todo.title">
     <div>
         <select [(ngModel)]="todo.status">

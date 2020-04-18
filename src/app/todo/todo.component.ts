@@ -53,5 +53,25 @@ export class TodoComponent implements OnInit {
 
   }
 
+  get isTodo(): boolean {
+    return this.todo !== undefined && this.todo.status === 'Todo';
+  }
+
+  get isDoing(): boolean {
+    return this.todo !== undefined && this.todo.status === 'Doing';
+  }
+
+  get isDone(): boolean {
+    return this.todo !== undefined && this.todo.status === 'Done';
+  }
+
+  get GetTitleClass(): any {
+    return {
+      todo: this.isTodo,
+      doing: this.isDoing,
+      done: this.isDone
+    };
+  }
+
 
 }
