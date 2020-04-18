@@ -17,6 +17,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CreateTodoComponent,
     ConfirmationModalComponent,
     BoardComponent,
-    TodotableComponent
+    TodotableComponent,
+    EditModalComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmationModalComponent]
+  entryComponents: [ConfirmationModalComponent, EditModalComponent]
 })
 export class AppModule { }

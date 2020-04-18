@@ -3,6 +3,7 @@ import { TodoService } from '../services/todo.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
 import { ITodo } from '../interfaces/itodo';
+import { EditModalComponent } from '../edit-modal/edit-modal.component';
 
 @Component({
   selector: 'app-todo',
@@ -18,9 +19,12 @@ export class TodoComponent implements OnInit {
   constructor(
     private todoService: TodoService,
     private modalService: NgbModal) { }
+
   todoTitle = '';
+
   ngOnInit() {
   }
+
   async deleteTodo(todo) {
     let result;
     const modal = this.modalService.open(ConfirmationModalComponent);
@@ -33,6 +37,20 @@ export class TodoComponent implements OnInit {
     } catch (ex) {
 
     }
+  }
+
+  async editDescription() {
+    const modal = this.modalService.open(EditModalComponent);
+    modal.componentInstance.modalInstance = modal;
+    modal.componentInstance.todo = this.todo;
+
+    try {
+      const result = await modal.result;
+      this.todo.description = result;
+    } catch (ex) {
+
+    }
+
   }
 
 

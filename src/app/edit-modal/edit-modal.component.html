@@ -1,0 +1,11 @@
+<div class="form-group">
+    <label for="dateOfBirth" style="margin-left: 10px;">Update this items description</label>
+    <div class="input-group">
+        <input type="text" [(ngModel)]="todo.description">
+        <div class="input-group-append">
+            <button type="button" class="btn btn-danger btn-sm" (click)="yes()" style="margin-left: 10px;">Save</button>
+            <!-- <button type="button" class="btn btn-danger btn-sm" (click)="close()" style="margin-left: 10px;">Don't
+                save</button> -->
+        </div>
+    </div>
+</div>

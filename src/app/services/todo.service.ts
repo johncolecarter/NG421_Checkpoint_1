@@ -26,6 +26,12 @@ export class TodoService {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
     this.todoList.splice(index, 1);
   }
+
+  editDescription(todo: ITodo) {
+
+  }
+
+
   addTodo(todo: ITodo): void {
     todo.id = ++this.todoId;
     this.todoList.push(todo);
